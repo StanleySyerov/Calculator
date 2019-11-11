@@ -1,4 +1,14 @@
+/* Version 0.0.1
+ *  -Fixed some buttons. 
+ *
+ *
+*/
+
+
 package calculatorGUI;
+
+
+
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -11,6 +21,9 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+
+
+
 
 public class Calculator extends JFrame {
 
@@ -74,13 +87,13 @@ public class Calculator extends JFrame {
         btnPercent.setBounds(134, 54, 60, 60);
         contentPane.add(btnPercent);
         
-        btnPlus = new JButton("+");
+        JButton btnPlus = new JButton("+");
         btnPlus.setFont(new Font("Tahoma", Font.BOLD, 20));
         btnPlus.setBounds(196, 54, 60, 60);
         contentPane.add(btnPlus);
         
         
-        //~~~~~~~~~~~~~~ 1st Row ~~~~~~~~~~~~~~~~~~~~~~~~~
+        //~~~~~~~~~~~~~~ Row 2 ~~~~~~~~~~~~~~~~~~~~~~~~~
         JButton btn7 = new JButton("7");
         btn7.setFont(new Font("Tahoma", Font.BOLD, 20));
         btn7.addActionListener(new ActionListener() {
@@ -104,12 +117,12 @@ public class Calculator extends JFrame {
         btn9.setBounds(134, 116, 60, 60);
         contentPane.add(btn9);
         
-        btnPlus = new JButton("+");
-        btnPlus.setFont(new Font("Tahoma", Font.BOLD, 20));
-        btnPlus.setBounds(196, 116, 60, 60);
-        contentPane.add(btnPlus);
+        JButton btnMinus = new JButton("-");
+        btnMinus.setFont(new Font("Tahoma", Font.BOLD, 20));
+        btnMinus.setBounds(196, 116, 60, 60);
+        contentPane.add(btnMinus);
         
-      //~~~~~~~~~~~~~~ 2nd Row ~~~~~~~~~~~~~~~~~~~~~~~~~
+      //~~~~~~~~~~~~~~ Row 3 ~~~~~~~~~~~~~~~~~~~~~~~~~
         JButton btn4 = new JButton("4");
         btn4.setFont(new Font("Tahoma", Font.BOLD, 20));
         btn4.addActionListener(new ActionListener() {
@@ -133,12 +146,12 @@ public class Calculator extends JFrame {
         btn6.setBounds(134, 178, 60, 60);
         contentPane.add(btn6);
         
-        JButton btnMinus = new JButton("-");
-        btnMinus.setFont(new Font("Tahoma", Font.BOLD, 20));
-        btnMinus.setBounds(196, 178, 60, 60);
-        contentPane.add(btnMinus);
+        JButton btnMult = new JButton("*");
+        btnMult.setFont(new Font("Tahoma", Font.BOLD, 20));
+        btnMult.setBounds(196, 178, 60, 60);
+        contentPane.add(btnMult);
         
-      //~~~~~~~~~~~~~~ 3rd Row ~~~~~~~~~~~~~~~~~~~~~~~~~
+      //~~~~~~~~~~~~~~ Row 4 ~~~~~~~~~~~~~~~~~~~~~~~~~
         JButton btn1 = new JButton("1");
         btn1.setFont(new Font("Tahoma", Font.BOLD, 20));
         btn1.addActionListener(new ActionListener() {
@@ -162,12 +175,12 @@ public class Calculator extends JFrame {
         btn3.setBounds(134, 240, 60, 60);
         contentPane.add(btn3);
         
-        JButton btnMult = new JButton("*");
-        btnMult.setFont(new Font("Tahoma", Font.BOLD, 20));
-        btnMult.setBounds(196, 240, 60, 60);
-        contentPane.add(btnMult);
+        JButton btnDiv = new JButton("/");
+        btnDiv.setFont(new Font("Tahoma", Font.BOLD, 20));
+        btnDiv.setBounds(196, 240, 60, 60);
+        contentPane.add(btnDiv);
         
-      //~~~~~~~~~~~~~~ 4th Row ~~~~~~~~~~~~~~~~~~~~~~~~~
+      //~~~~~~~~~~~~~~ Row 5 ~~~~~~~~~~~~~~~~~~~~~~~~~
         JButton btn0 = new JButton("0");
         btn0.setFont(new Font("Tahoma", Font.BOLD, 20));
         btn0.addActionListener(new ActionListener() {
