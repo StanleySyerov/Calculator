@@ -290,6 +290,13 @@ public class Calculator extends JFrame {
         contentPane.add(btn0);
         
         JButton btnDot = new JButton(".");
+        btnDot.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                //Enter a decimal dot
+                String enterNumber = textField.getText() + ".";
+                textField.setText(enterNumber);
+            }
+        });
         btnDot.setFont(new Font("Tahoma", Font.BOLD, 20));
         btnDot.setBounds(72, 302, 60, 60);
         contentPane.add(btnDot);
@@ -308,7 +315,10 @@ public class Calculator extends JFrame {
         JButton btnEqual = new JButton("=");
         btnEqual.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                                
+                
+                if(textField.getText().isEmpty())
+                    return;
+                    
                 secondNumber = Double.parseDouble(textField.getText());
                 
                 if(operation == "+") 
@@ -325,10 +335,7 @@ public class Calculator extends JFrame {
                 
                 else if(operation == "%")
                     result = String.format("%.2f", firstNumber % secondNumber);
-                
-                else if(operation == "")
-                    return;
-                
+                                
                 textField.setText(result);
                 
                                 
